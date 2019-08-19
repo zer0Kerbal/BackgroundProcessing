@@ -1,4 +1,3 @@
-
 *.lock
 *.ide
 *.ide-shm
@@ -233,4 +232,4 @@ $RECYCLE.BIN/
 # Archive
 .zip
 .rar
-.7z
+.7z
