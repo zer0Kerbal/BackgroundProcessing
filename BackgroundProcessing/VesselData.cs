@@ -71,9 +71,14 @@ namespace BackgroundProcessing {
 
 			if (m != null && m.moduleName == "ModuleCommand") {
 				ret.AddRange(ResourceHandlers.Command.GetResourceGenerationData(m, part, resourceData, interestingResources));
-			}
+            }
 
-			if (m != null && resourceData.ContainsKey(m.moduleName)) { ret.AddRange(resourceData[m.moduleName]); }
+            if (m != null && m.moduleName == "ModuleBackgroundProcessing")
+            {
+                ret.AddRange(ResourceHandlers.Command.GetResourceGenerationData(m, part, resourceData, interestingResources));
+            }
+
+            if (m != null && resourceData.ContainsKey(m.moduleName)) { ret.AddRange(resourceData[m.moduleName]); }
 			return ret;
 		}
 
